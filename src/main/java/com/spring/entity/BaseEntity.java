@@ -1,4 +1,4 @@
-package com.spring.entity;
+package com .spring.entity;
 
 import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
@@ -9,13 +9,12 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import javax.persistence.*;
 import java.util.Date;
 
-
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
-public class BaseEntity {
+public class  BaseEntity {
 
 
     @Id
