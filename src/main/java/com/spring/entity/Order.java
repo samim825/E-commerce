@@ -1,7 +1,31 @@
 package com.spring.entity;
 
-/**
- * Created by User on 2021-04-25.
- */
-public class Order {
+
+import lombok.*;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import java.math.BigDecimal;
+import java.util.List;
+
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+
+@Entity
+@Table(name="Order")
+public class Order extends BaseEntity {
+
+    // To do:  user;
+
+    @Column(name = "total_price")
+    private BigDecimal total_price;
+
+
+    // To do: orderItems;
+
+    // To do: oderStatus;
+
 }
