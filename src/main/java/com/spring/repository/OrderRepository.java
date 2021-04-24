@@ -1,7 +1,9 @@
 package com.spring.repository;
 
-/**
- * Created by User on 2021-04-24.
- */
-public interface OrderRepository {
+import com.spring.entity.Order;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+
+public interface OrderRepository extends JpaRepository<Order,String> {
+
 }
