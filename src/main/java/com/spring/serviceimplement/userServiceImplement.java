@@ -4,6 +4,8 @@ import com.spring.entity.UserEntity;
 import com.spring.repository.UserRepository;
 import com.spring.service.userService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -33,13 +35,14 @@ public class userServiceImplement implements userService {
     }
 
     @Override
-    public List<UserEntity> FindAllUser(Integer id) {
+    public Page<UserEntity> FindAllUser(Pageable pageable) {
 
-        return userRepository.findAll();
+        return userRepository.findAll(pageable);
     }
 
     @Override
     public void DeleteUser(Integer id) {
+
         userRepository.deleteById(id);
     }
 }
