@@ -26,10 +26,11 @@ public class UserController {
                 .body(userServiceImplement.AddUser(ue));
     }
 
-    @PutMapping("/update/{id}")
-    public ResponseEntity<UserEntity> UpdateUser(@RequestBody UserEntity id){
+    @PutMapping("/update")
+    public ResponseEntity<UserEntity> UpdateUser(@RequestBody UserEntity ue){
+        ue.setUpdatedDate(new Date());
         return ResponseEntity.status(HttpStatus.ACCEPTED)
-            .body(userServiceImplement.UpdateUser(id));
+            .body(userServiceImplement.UpdateUser(ue));
     }
 
     @GetMapping("/find/{id}")
