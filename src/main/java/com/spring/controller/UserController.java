@@ -3,6 +3,7 @@ package com.spring.controller;
 import com.spring.entity.UserEntity;
 import com.spring.serviceimplement.userServiceImplement;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
 
@@ -31,10 +32,13 @@ public class UserController {
     }
 
     @GetMapping("/findall")
-    public List<UserEntity> FindAllUsers(Pageable pageable){
+    public Page<UserEntity> FindAllUsers(Pageable pageable){
         return userServiceImplement.FindAllUser(pageable);
     }
-    public String DeleteUser(){
-    return "yes";
+
+    @DeleteMapping("/delete/{id}")
+    public String DeleteUser(@PathVariable Integer id){
+    userServiceImplement.DeleteUser(id);
+    return "Deleted";
     }
 }
