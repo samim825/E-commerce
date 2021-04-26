@@ -45,7 +45,7 @@ public class CartController {
         return ResponseEntity.ok(cartService.findAll(pageable));
     }
 
-    @DeleteMapping
+    @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteCart(@PathVariable String id){
         log.debug("Delete a cart with this id : "+id);
         cartService.delete(id);
