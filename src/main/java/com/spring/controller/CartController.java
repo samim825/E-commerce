@@ -41,7 +41,7 @@ public class CartController {
 
     @GetMapping
     public ResponseEntity<Page<Cart>> findAll(Pageable pageable){
-        log.info("Find all cart lists");
+        log.debug("Find all cart lists");
         return ResponseEntity.ok(cartService.findAll(pageable));
     }
 
