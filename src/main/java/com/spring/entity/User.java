@@ -16,9 +16,9 @@ import javax.persistence.Entity;
 @NoArgsConstructor
 public class User extends BaseEntity{
 
-    @Column(name = "user name")
+    @Column(name = "user_name")
     private String userName;
 
-    @Column(name="Contuct Number")
+    @Column(name="contuct_Number")
     private String userContactNumber;
 }
