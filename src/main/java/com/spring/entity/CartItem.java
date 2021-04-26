@@ -13,7 +13,6 @@ import java.math.BigDecimal;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "student_table")
 public class CartItem extends BaseEntity {
 
     @Column(name = "product_name")
