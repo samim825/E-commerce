@@ -1,21 +1,18 @@
 package com.spring.entity;
 
-
+import com.sun.istack.NotNull;
 import lombok.*;
+import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.math.BigDecimal;
-import java.util.List;
-
+import java.util.Date;
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
-
+@NoArgsConstructor
 @Entity
-@Table(name="Order")
+@Table(name = "Order_table")
 public class Order extends BaseEntity {
 
     // To do:  user;
