@@ -24,7 +24,6 @@ public class OrderController {
     public ResponseEntity<Order> createOrder(@RequestBody Order order){
         order.setCreatedDate(new Date());
         order.setUpdatedDate(new Date());
-
         return ResponseEntity.status(HttpStatus.CREATED)
                 .body(orderServiceImpl.create(order));
     }
