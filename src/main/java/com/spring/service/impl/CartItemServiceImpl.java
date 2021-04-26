@@ -1,7 +1,7 @@
-package com.spring.Service.Impl;
+package com.spring.service.impl;
 
-import com.spring.Repository.CartItemRepository;
-import com.spring.Service.CartItemService;
+import com.spring.repository.CartItemRepository;
+import com.spring.service.CartItemService;
 import com.spring.entity.CartItem;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -37,7 +37,7 @@ public class CartItemServiceImpl implements CartItemService
     }
 
     @Override
-    public void deletebyId(String id) {
+    public void delete(String id) {
         cartItemRepository.deleteById(id);
     }
 }

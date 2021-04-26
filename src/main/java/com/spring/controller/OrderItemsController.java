@@ -18,11 +18,6 @@ public class OrderItemsController {
     @Autowired
     OrderItemsServiceImpl orderItemsService;
 
-    @GetMapping("/ok")
-    public String okay(){
-
-        return "okay";
-    }
 
 
     @PostMapping

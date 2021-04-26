@@ -14,11 +14,11 @@ import javax.persistence.Entity;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserEntity extends BaseEntity{
+public class User extends BaseEntity{
 
-    @Column(name = "Customr's name")
-    private String UserName;
+    @Column(name = "user name")
+    private String userName;
 
     @Column(name="Contuct Number")
-    private Integer UserContactNumber;
+    private String userContactNumber;
 }

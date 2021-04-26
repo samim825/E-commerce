@@ -1,4 +1,4 @@
-package com.spring.service.serviceImpl;
+package com.spring.service.impl;
 
 import com.spring.entity.Cart;
 import com.spring.repository.CartRepository;

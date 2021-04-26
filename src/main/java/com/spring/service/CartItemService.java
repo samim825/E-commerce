@@ -1,4 +1,4 @@
-package com.spring.Service;
+package com.spring.service;
 
 import com.spring.entity.CartItem;
 import org.springframework.data.domain.Page;
@@ -17,5 +17,5 @@ public interface CartItemService
 
     Page<CartItem> findAll(Pageable pageable);
 
-    void deletebyId(String id);
+    void delete(String id);
 }

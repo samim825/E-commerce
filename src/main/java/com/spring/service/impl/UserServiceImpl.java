@@ -1,48 +1,43 @@
-package com.spring.serviceimplement;
+package com.spring.service.impl;
 
-import com.spring.entity.UserEntity;
+import com.spring.entity.User;
 import com.spring.repository.UserRepository;
-import com.spring.service.userService;
+import com.spring.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 import java.util.Optional;
 
 @Service
-public class userServiceImplement implements userService {
+public class UserServiceImpl implements UserService {
+
     @Autowired
     UserRepository userRepository;
 
     @Override
-    public UserEntity AddUser(UserEntity ue) {
-
-        return userRepository.save(ue);
+    public User create(User user) {
+        return userRepository.save(user);
     }
 
     @Override
-    public UserEntity UpdateUser(UserEntity ue) {
-
-        return userRepository.save(ue);
+    public User update(User user) {
+        return userRepository.save(user);
     }
 
     @Override
-    public Optional<UserEntity> FindUserById(Integer id) {
-
+    public Optional<User> findById(String id) {
         return userRepository.findById(id);
     }
 
     @Override
-    public Page<UserEntity> FindAllUser(Pageable pageable) {
-
+    public Page<User> findAll(Pageable pageable) {
         return userRepository.findAll(pageable);
     }
 
     @Override
-    public void DeleteUser(Integer id) {
-
+    public void delete(String id) {
         userRepository.deleteById(id);
     }
 }

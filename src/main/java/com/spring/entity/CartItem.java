@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 
 @Entity
 @Setter
@@ -15,13 +16,13 @@ import javax.persistence.*;
 @Table(name = "student_table")
 public class CartItem extends BaseEntity {
 
-    @Column(name = "Product_name")
-    private String product_name;
+    @Column(name = "product_name")
+    private String productName;
 
-    @Column(name = "Product_price")
-    private Integer Product_price;
+    @Column(name = "product_price")
+    private BigDecimal productPrice;
 
-    @Column(name = "Quantity")
+    @Column(name = "quantity")
     private Integer quantity;
 
     // Todo User

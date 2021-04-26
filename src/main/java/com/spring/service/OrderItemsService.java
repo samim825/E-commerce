@@ -14,14 +14,14 @@ import java.util.Optional;
 public interface OrderItemsService {
 
 
-    public OrderItems create(OrderItems orderItems);
+    OrderItems create(OrderItems orderItems);
 
-    public OrderItems update(OrderItems orderItems);
+    OrderItems update(OrderItems orderItems);
 
-    public Optional<OrderItems> findById(String id);
+    Optional<OrderItems> findById(String id);
 
-    public Page<OrderItems> findAll(Pageable pageable);
+    Page<OrderItems> findAll(Pageable pageable);
 
-    public void delete(String id);
+    void delete(String id);
 
 }

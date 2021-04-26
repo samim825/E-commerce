@@ -1,6 +1,6 @@
-package com.spring.Controller;
+package com.spring.controller;
 
-import com.spring.Service.Impl.CartItemServiceImpl;
+import com.spring.service.impl.CartItemServiceImpl;
 import com.spring.entity.CartItem;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -41,6 +41,6 @@ public class CartItemController {
 
     @DeleteMapping("/id/{id}")
     public void deleteStudent(@PathVariable String id){
-        cartItemServiceImpl.deletebyId(id);
+        cartItemServiceImpl.delete(id);
     }
 }

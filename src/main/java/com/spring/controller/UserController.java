@@ -1,7 +1,7 @@
 package com.spring.controller;
 
-import com.spring.entity.UserEntity;
-import com.spring.serviceimplement.userServiceImplement;
+import com.spring.entity.User;
+import com.spring.service.impl.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -13,41 +13,41 @@ import java.util.Date;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/user")
+@RequestMapping("/api/private/user")
 public class UserController {
     @Autowired
-    userServiceImplement userServiceImplement;
+    UserServiceImpl userService;
 
-    @PostMapping("/add")
-    public ResponseEntity<UserEntity> CreateUser(@RequestBody UserEntity ue){
-        ue.setCreatedDate(new Date());
-        ue.setUpdatedDate(new Date());
+    @PostMapping
+    public ResponseEntity<User> createUser(@RequestBody User user){
+        user.setCreatedDate(new Date());
+        user.setUpdatedDate(new Date());
         return ResponseEntity.status(HttpStatus.CREATED)
-                .body(userServiceImplement.AddUser(ue));
+                .body(userService.create(user));
     }
 
-    @PutMapping("/update")
-    public ResponseEntity<UserEntity> UpdateUser(@RequestBody UserEntity ue){
-        ue.setUpdatedDate(new Date());
+    @PutMapping
+    public ResponseEntity<User> updateUser(@RequestBody User user){
+        user.setUpdatedDate(new Date());
         return ResponseEntity.status(HttpStatus.ACCEPTED)
-            .body(userServiceImplement.UpdateUser(ue));
+            .body(userService.update(user));
     }
 
-    @GetMapping("/find/{id}")
-    public ResponseEntity<Optional<UserEntity>>FindUser(@PathVariable Integer id){
+    @GetMapping("/id/{id}")
+    public ResponseEntity<Optional<User>> findUserById(@PathVariable String id){
         return ResponseEntity.status(HttpStatus.FOUND)
-            .body(userServiceImplement.FindUserById(id));
+            .body(userService.findById(id));
     }
 
-    @GetMapping("/findall")
-    public ResponseEntity<Page<UserEntity>> FindAllUsers(Pageable pageable){
+    @GetMapping
+    public ResponseEntity<Page<User>> FindAllUsers(Pageable pageable){
         return ResponseEntity.status(HttpStatus.OK)
-                .body(userServiceImplement.FindAllUser(pageable));
+                .body(userService.findAll(pageable));
     }
 
-    @DeleteMapping("/delete/{id}")
-    public ResponseEntity<Void> DeleteUser(@PathVariable Integer id){
-        userServiceImplement.DeleteUser(id);
+    @DeleteMapping("/id/{id}")
+    public ResponseEntity<Void> DeleteUser(@PathVariable String id){
+        userService.delete(id);
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
 
     }
