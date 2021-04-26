@@ -41,11 +41,11 @@ public class CartController {
 
     @GetMapping
     public ResponseEntity<Page<Cart>> findAll(Pageable pageable){
-        log.debug("Find all cart lists");
+        log.info("Find all cart lists");
         return ResponseEntity.ok(cartService.findAll(pageable));
     }
 
-    @DeleteMapping
+    @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteCart(@PathVariable String id){
         log.debug("Delete a cart with this id : "+id);
         cartService.delete(id);
