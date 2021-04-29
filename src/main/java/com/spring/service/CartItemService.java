@@ -1,6 +1,6 @@
 package com.spring.service;
 
-import com.spring.entity.CartItem;
+import com.spring.entity.cart.CartItem;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

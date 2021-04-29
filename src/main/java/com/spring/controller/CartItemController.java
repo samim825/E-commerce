@@ -1,7 +1,7 @@
 package com.spring.controller;
 
 import com.spring.service.impl.CartItemServiceImpl;
-import com.spring.entity.CartItem;
+import com.spring.entity.cart.CartItem;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

@@ -1,5 +1,8 @@
-package com.spring.entity;
+package com.spring.entity.cart;
 
+import com.spring.entity.BaseEntity;
+import com.spring.entity.Product;
+import com.spring.entity.user.User;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -15,14 +18,15 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 public class CartItem extends BaseEntity {
 
-    @Column(name = "product_name")
-    private String productName;
+    @Column(name = "product_id")
+    private Product product;
 
-    @Column(name = "product_price")
-    private BigDecimal productPrice;
+    @Column(name = "cartItem_price")
+    private BigDecimal price;
 
     @Column(name = "quantity")
     private Integer quantity;
 
-    // Todo User
+    @Column(name = "user_id")
+    private User user;
 }

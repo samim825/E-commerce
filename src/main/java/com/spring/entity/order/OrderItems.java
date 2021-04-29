@@ -8,6 +8,7 @@ package com.spring.entity.order;
 
 
 import com.spring.entity.BaseEntity;
+import com.spring.entity.Product;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -42,5 +43,6 @@ public class OrderItems extends BaseEntity {
     @Column(name = "order_status")
     private String status;
 
+    private Product product;
 }
 

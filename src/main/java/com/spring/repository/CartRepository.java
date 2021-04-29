@@ -1,6 +1,6 @@
 package com.spring.repository;
 
-import com.spring.entity.Cart;
+import com.spring.entity.cart.Cart;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 
