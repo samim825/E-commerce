@@ -1,7 +1,7 @@
 package com.spring.service;
 
 
-import com.spring.entity.Cart;
+import com.spring.entity.cart.Cart;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

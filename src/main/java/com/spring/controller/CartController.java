@@ -1,6 +1,6 @@
 package com.spring.controller;
 
-import com.spring.entity.Cart;
+import com.spring.entity.cart.Cart;
 import com.spring.service.impl.CartServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

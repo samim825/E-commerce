@@ -2,7 +2,7 @@ package com.spring.service.impl;
 
 import com.spring.repository.CartItemRepository;
 import com.spring.service.CartItemService;
-import com.spring.entity.CartItem;
+import com.spring.entity.cart.CartItem;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
