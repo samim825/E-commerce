@@ -1,12 +1,10 @@
 package com.spring.entity.address;
 
 import com.spring.entity.BaseEntity;
+import com.spring.entity.user.User;
 import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
+import javax.persistence.*;
 
 
 @Entity
@@ -16,6 +14,9 @@ import javax.persistence.Enumerated;
 @NoArgsConstructor
 @ToString
 public class Address extends BaseEntity {
+
+    @ManyToOne
+    private User user;
 
     @Column(name = "country")
     private String country;

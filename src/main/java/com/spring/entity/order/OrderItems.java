@@ -27,15 +27,8 @@ import java.math.BigDecimal;
 @Table(name = "order_items")
 public class OrderItems extends BaseEntity {
 
-
-    //@Column(name = "product")
-    //private Product product;
-
-
     @Column(name = "order_price")
     private BigDecimal price;
-
-
 
     @Column(name = "order_quantity")
     private Integer quantity;
@@ -43,6 +36,11 @@ public class OrderItems extends BaseEntity {
     @Column(name = "order_status")
     private String status;
 
+    @OneToOne
     private Product product;
+
+//    @Column(name = "order_status", nullable = false)
+//    @Enumerated(EnumType.STRING)
+//    private OrderStatus oderStatus;
 }
 

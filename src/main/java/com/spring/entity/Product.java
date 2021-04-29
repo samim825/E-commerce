@@ -15,6 +15,7 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @Entity
 @Table(name ="Products_table")
+
 public class Product extends BaseEntity {
 
     private String productName;
