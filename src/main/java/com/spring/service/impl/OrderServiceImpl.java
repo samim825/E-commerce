@@ -1,7 +1,7 @@
 package com.spring.service.impl;
 
 
-import com.spring.entity.Order;
+import com.spring.entity.order.Order;
 import com.spring.repository.OrderRepository;
 import com.spring.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,6 +1,6 @@
 package com.spring.repository;
 
-import com.spring.entity.Address;
+import com.spring.entity.address.Address;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**

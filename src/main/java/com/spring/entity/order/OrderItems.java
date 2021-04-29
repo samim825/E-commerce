@@ -2,11 +2,12 @@
 
 
 
-package com.spring.entity;
+package com.spring.entity.order;
 
 
 
 
+import com.spring.entity.BaseEntity;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

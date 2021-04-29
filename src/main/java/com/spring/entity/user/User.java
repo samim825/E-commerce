@@ -1,5 +1,6 @@
-package com.spring.entity;
+package com.spring.entity.user;
 
+import com.spring.entity.BaseEntity;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -14,11 +15,13 @@ import javax.persistence.Entity;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class User extends BaseEntity{
+public class User extends BaseEntity {
 
     @Column(name = "user_name")
     private String userName;
 
     @Column(name="contuct_Number")
     private String userContactNumber;
+
+    //TODO: billing Address, shipping address
 }
