@@ -24,7 +24,7 @@ public class Order extends BaseEntity {
     @Column(name = "total_price",nullable = false)
     private BigDecimal totalPrice;
 
-    
+
     private List<OrderItems> orderItems;
 
     @Column(name = "orders_status", nullable = false)
