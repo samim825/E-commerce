@@ -1,6 +1,7 @@
 package com.spring.entity.order;
 
 import com.spring.entity.BaseEntity;
+import com.spring.entity.user.User;
 import com.sun.istack.NotNull;
 import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
@@ -8,6 +9,7 @@ import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -16,14 +18,17 @@ import java.util.Date;
 @Table(name = "Order_table")
 public class Order extends BaseEntity {
 
-    // To do:  user;
 
-    @Column(name = "total_price")
+    private User user;
+
+    @Column(name = "total_price",nullable = false)
     private BigDecimal totalPrice;
 
+    
+    private List<OrderItems> orderItems;
 
-    // To do: orderItems;
-
-    // To do: oderStatus;
+    @Column(name = "orders_status", nullable = false)
+    @Enumerated(EnumType.STRING)
+    private OrderStatus orderStatus;
 
 }
