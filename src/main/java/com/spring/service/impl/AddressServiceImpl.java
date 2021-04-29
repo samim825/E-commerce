@@ -1,6 +1,6 @@
 package com.spring.service.impl;
 
-import com.spring.entity.Address;
+import com.spring.entity.address.Address;
 import com.spring.repository.AddressRepository;
 import com.spring.service.AddressService;
 import org.springframework.beans.factory.annotation.Autowired;

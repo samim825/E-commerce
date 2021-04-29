@@ -1,7 +1,7 @@
 package com.spring.service;
 
 
-import com.spring.entity.Order;
+import com.spring.entity.order.Order;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

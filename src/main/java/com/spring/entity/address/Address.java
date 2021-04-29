@@ -1,13 +1,14 @@
-package com.spring.entity;
+package com.spring.entity.address;
 
+import com.spring.entity.BaseEntity;
 import lombok.*;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 
-/**
- * Created by ABDUL MUKIT on 4/28/2021.
- */
+
 @Entity
 @Setter
 @Getter
@@ -15,6 +16,7 @@ import javax.persistence.Entity;
 @NoArgsConstructor
 @ToString
 public class Address extends BaseEntity {
+
     @Column(name = "country")
     private String country;
 
@@ -29,5 +31,9 @@ public class Address extends BaseEntity {
 
     @Column(name="postal_code")
     private Integer postalCode;
+
+    @Column(name = "address_type", nullable = false)
+    @Enumerated(EnumType.STRING)
+    private AddressType type;
 
 }

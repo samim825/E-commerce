@@ -1,6 +1,6 @@
 package com.spring.service;
 
-import com.spring.entity.User;
+import com.spring.entity.user.User;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;

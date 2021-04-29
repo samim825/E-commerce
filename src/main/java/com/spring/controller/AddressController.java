@@ -1,6 +1,6 @@
 package com.spring.controller;
 
-import com.spring.entity.Address;
+import com.spring.entity.address.Address;
 import com.spring.service.impl.AddressServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

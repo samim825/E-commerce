@@ -1,6 +1,6 @@
 package com.spring.controller;
 
-import com.spring.entity.Order;
+import com.spring.entity.order.Order;
 import com.spring.service.impl.OrderServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

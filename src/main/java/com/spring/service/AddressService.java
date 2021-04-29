@@ -1,6 +1,6 @@
 package com.spring.service;
 
-import com.spring.entity.Address;
+import com.spring.entity.address.Address;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

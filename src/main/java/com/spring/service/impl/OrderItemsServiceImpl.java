@@ -1,6 +1,6 @@
 package com.spring.service.impl;
 
-import com.spring.entity.OrderItems;
+import com.spring.entity.order.OrderItems;
 import com.spring.repository.OrderItemsRepository;
 import com.spring.service.OrderItemsService;
 import org.springframework.beans.factory.annotation.Autowired;

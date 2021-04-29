@@ -1,5 +1,6 @@
-package com.spring.entity;
+package com.spring.entity.order;
 
+import com.spring.entity.BaseEntity;
 import com.sun.istack.NotNull;
 import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
