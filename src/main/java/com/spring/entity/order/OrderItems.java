@@ -42,7 +42,7 @@ public class OrderItems extends BaseEntity {
 
     @Column(name = "order_status")
     private String status;
-
-    private Product product;
+//
+//    private Product product;
 }
 
