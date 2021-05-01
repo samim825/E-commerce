@@ -1,7 +1,7 @@
 package com.spring.controller;
 
 import com.spring.entity.UserEntity;
-import com.spring.serviceimplement.userServiceImplement;
+import com.spring.service.userService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -16,38 +16,38 @@ import java.util.Optional;
 @RequestMapping("/api/user")
 public class UserController {
     @Autowired
-    userServiceImplement userServiceImplement;
+    userService userService;
 
     @PostMapping("/add")
     public ResponseEntity<UserEntity> CreateUser(@RequestBody UserEntity ue){
         ue.setCreatedDate(new Date());
         ue.setUpdatedDate(new Date());
         return ResponseEntity.status(HttpStatus.CREATED)
-                .body(userServiceImplement.AddUser(ue));
+                .body(userService.AddUser(ue));
     }
 
     @PutMapping("/update")
     public ResponseEntity<UserEntity> UpdateUser(@RequestBody UserEntity ue){
         ue.setUpdatedDate(new Date());
         return ResponseEntity.status(HttpStatus.ACCEPTED)
-            .body(userServiceImplement.UpdateUser(ue));
+            .body(userService.UpdateUser(ue));
     }
 
     @GetMapping("/find/{id}")
     public ResponseEntity<Optional<UserEntity>>FindUser(@PathVariable Integer id){
         return ResponseEntity.status(HttpStatus.FOUND)
-            .body(userServiceImplement.FindUserById(id));
+            .body(userService.FindUserById(id));
     }
 
     @GetMapping("/findall")
     public ResponseEntity<Page<UserEntity>> FindAllUsers(Pageable pageable){
         return ResponseEntity.status(HttpStatus.OK)
-                .body(userServiceImplement.FindAllUser(pageable));
+                .body(userService.FindAllUser(pageable));
     }
 
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<Void> DeleteUser(@PathVariable Integer id){
-        userServiceImplement.DeleteUser(id);
+        userService.DeleteUser(id);
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
 
     }

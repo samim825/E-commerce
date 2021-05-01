@@ -17,32 +17,22 @@ public class userServiceImplement implements userService {
     UserRepository userRepository;
 
     @Override
-    public UserEntity AddUser(UserEntity ue) {
-
-        return userRepository.save(ue);
+    public UserEntity AddUser(UserEntity ue) { return userRepository.save(ue);
     }
 
     @Override
-    public UserEntity UpdateUser(UserEntity ue) {
-
-        return userRepository.save(ue);
+    public UserEntity UpdateUser(UserEntity ue) { return userRepository.save(ue);
     }
 
     @Override
-    public Optional<UserEntity> FindUserById(Integer id) {
-
-        return userRepository.findById(id);
+    public Optional<UserEntity> FindUserById(Integer id) { return userRepository.findById(id);
     }
 
     @Override
-    public Page<UserEntity> FindAllUser(Pageable pageable) {
-
-        return userRepository.findAll(pageable);
+    public Page<UserEntity> FindAllUser(Pageable pageable) { return userRepository.findAll(pageable);
     }
 
     @Override
-    public void DeleteUser(Integer id) {
-
-        userRepository.deleteById(id);
+    public void DeleteUser(Integer id) { userRepository.deleteById(id);
     }
 }
