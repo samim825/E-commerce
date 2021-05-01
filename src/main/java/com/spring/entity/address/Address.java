@@ -32,7 +32,7 @@ public class Address extends BaseEntity {
     @Column(name="postal_code")
     private Integer postalCode;
 
-    @Column(name = "address_type", nullable = false)
+    @Column(name = "address_type")
     @Enumerated(EnumType.STRING)
     private AddressType type;
 
