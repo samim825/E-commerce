@@ -19,14 +19,14 @@ import java.util.List;
 public class Order extends BaseEntity {
 
 
-    // mapping
-    private User user;
+//    // mapping
+//    private User user;
 
     @Column(name = "total_price",nullable = false)
     private BigDecimal totalPrice;
 
-    // mapping
-    private List<OrderItems> orderItems;
+//    // mapping
+//    private List<OrderItems> orderItems;
 
     @Column(name = "orders_status", nullable = false)
     @Enumerated(EnumType.STRING)

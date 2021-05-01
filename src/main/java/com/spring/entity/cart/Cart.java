@@ -18,7 +18,7 @@ public class Cart extends BaseEntity {
 
     private BigDecimal totalPrice;
 
-    private User user;
-
-    private List<CartItem> cartItems;
+//    private User user;
+//
+//    private List<CartItem> cartItems;
 }
