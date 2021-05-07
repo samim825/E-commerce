@@ -27,7 +27,7 @@ public class User extends BaseEntity {
     @Column(name = "last_name", length = 50)
     private String lastName;
 
-    @Column(name = "email", length = 50, nullable = false, unique = true)
+    @Column(name = "email", length = 100, nullable = false, unique = true)
     private String email;
 
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
@@ -43,7 +43,7 @@ public class User extends BaseEntity {
     @Column(name = "enabled")
     private Boolean enabled;
 
-    @Column
+    @Column(name = "last_password_reset_date")
     @Temporal(TemporalType.TIMESTAMP)
     private Date lastPasswordResetDate;
 
