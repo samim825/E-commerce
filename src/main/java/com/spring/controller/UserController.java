@@ -1,6 +1,8 @@
 package com.spring.controller;
 
+import com.spring.dto.UserDto;
 import com.spring.entity.user.User;
+import com.spring.mapper.UserMapper;
 import com.spring.service.impl.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -10,13 +12,15 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/private/user")
 public class UserController {
     @Autowired
     UserServiceImpl userService;
+
+    @Autowired
+    UserMapper userMapper;
 
     @PostMapping
     public ResponseEntity<User> createUser(@RequestBody User user){
@@ -34,13 +38,13 @@ public class UserController {
     }
 
     @GetMapping("/id/{id}")
-    public ResponseEntity<Optional<User>> findUserById(@PathVariable String id){
+    public ResponseEntity<UserDto> findUserById(@PathVariable String id){
         return ResponseEntity.status(HttpStatus.OK)
-            .body(userService.findById(id));
+            .body(userMapper.map(userService.findById(id)));
     }
 
     @GetMapping
-    public ResponseEntity<Page<User>> FindAllUsers(Pageable pageable){
+    public ResponseEntity<Page<User>> findAllUsers(Pageable pageable){
         return ResponseEntity.status(HttpStatus.OK)
                 .body(userService.findAll(pageable));
     }
